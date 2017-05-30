@@ -1,0 +1,24 @@
+#cover {
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:600px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+}
+
+#cover-text {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    padding-top: 190px;
+    font-size: 5.5em;
+}
+
+#cover-subtext {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    padding-top: 10px;
+}
