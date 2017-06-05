@@ -32,9 +32,12 @@
     padding-top: 10px;
 }
 
-#posts {
+.post-div {
     position: absolute;
     top: 550px;
+}
+
+#posts {
     margin: 0 100px;
 }
 
