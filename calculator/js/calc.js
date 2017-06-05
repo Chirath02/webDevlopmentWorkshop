@@ -24,6 +24,11 @@ function num(key) {
 }
 
 function operate(symbol) {
+    if (flag === 1) {
+        num1 = "" + res;
+        num2 = "";
+        
+    }
     operator = symbol;
     display(num1 + " " +  operator);
 }
