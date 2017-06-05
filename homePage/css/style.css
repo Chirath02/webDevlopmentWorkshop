@@ -8,6 +8,15 @@
     position: absolute;
 }
 
+#cover-detail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:500px;
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+
 #cover-text {
     padding-left: 16%;
     color: white;
@@ -27,6 +36,13 @@
     position: absolute;
     top: 550px;
     margin: 0 100px;
+}
+
+#post-detail {
+    font-size: 1.2em;
+    position: absolute;
+    top: 550px;
+    margin: 0 250px;
 }
 
 .img {
