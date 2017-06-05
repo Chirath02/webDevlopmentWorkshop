@@ -2,23 +2,34 @@
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height:600px;
+    height:500px;
     width: 100%;
     top: 0;
-    position: fixed;
+    position: absolute;
 }
 
 #cover-text {
-    text-align: center;
+    padding-left: 16%;
     color: white;
     font-weight: 900;
-    padding-top: 190px;
+    padding-top: 150px;
     font-size: 5.5em;
 }
 
 #cover-subtext {
-    text-align: center;
     color: white;
+    padding-left: 16%;
     font-weight: 900;
     padding-top: 10px;
+}
+
+#posts {
+    position: absolute;
+    top: 550px;
+    margin: 0 100px;
+}
+
+.img {
+    height: 250px;
+    margin: 20px 0px;
 }

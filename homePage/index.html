@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Blog</title>
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/style.css" >
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-fixed-top">
@@ -24,14 +25,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" style="color: white">Brand</a>
+      <a class="navbar-brand" href="#" style="color: white">Blog</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#" style="color: white">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#" style="color: white">Link</a></li>
+        <li class="active"><a href="#" style="color: white">New post<span class="sr-only">(current)</span></a></li>
+        <li><a href="#" style="color: white">Drafts</a></li>
+        <li><a href="#" style="color: white">View all</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -46,17 +48,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" style="color: white">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle"  style="color: white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><a href="#" style="color: white">Username</a></li>
+        <li><a href="#" style="color: white">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -64,7 +57,46 @@
 
 <div id="cover">
         <h1 id="cover-text">Welcome</h1>
-        <h3 id="cover-subtext">Welcome to web development</h3>
+        <h3 id="cover-subtext">Welcome to my Blog</h3>
+</div>
+
+<div id="posts">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <a href=""><h3>What is Lorem Ipsum?</h3></a>
+                <img src="img/1.jpg" class="img-responsive img" alt="Responsive image">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer tooka galley of type and scrambled it to make a type specimen book.
+                    It has survived not..<a href="">read more</a></p>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href=""><h3>Why do we use it?</h3></a>
+                <img src="img/2.jpg" class="img-responsive img" alt="Responsive image">
+                <p>It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum
+                    is that it has a more-or-less normal distribution of letters, as opposed to  using
+                    'Content here, content here..<a href="">read more</a></p>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href=""><h3>What is Lorem Ipsum?</h3></a>
+                <img src="img/3.jpg" class="img-responsive img" alt="Responsive image">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer tooka galley of type and scrambled it to make a type specimen book.
+                    It has survived not ..<a href="">read more</a></p>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href=""><h3>What is Lorem Ipsum?</h3></a>
+                <img src="img/4.jpg" class="img-responsive img" alt="Responsive image">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer tooka galley of type and scrambled it to make a type specimen book.
+                    It has survived not ..<a href="">read more</a></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
