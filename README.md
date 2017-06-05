@@ -12,10 +12,12 @@ AngularJs
 ### Calulator
 
 HTML/CSS/JS calculator app
+![Alt text](/calculator/img.png?raw=true "Calculator")
 
 ### homePage
 
 A blog designed using Bootstrap
+![Alt text](/homePage/img.png?raw=true "Calculator")
 
 ### mysite
 
