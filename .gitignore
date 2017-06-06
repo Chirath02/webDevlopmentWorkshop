@@ -13,3 +13,5 @@ __pycache__/
 ### Pycharm ###
 .idea/
 */db.sqlite3
+
+*/media/*
