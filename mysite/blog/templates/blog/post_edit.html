@@ -9,12 +9,15 @@
     {% csrf_token %}
     Title
     <br>
-    <textarea cols="100" name="title">{{ post.title }}</textarea>
+    <textarea rows="3" cols="100" name="title">{{ post.title }}</textarea>
     <br>
     Content
     <br>
-    <textarea rows="4" cols="100" name="content">{{ post.content }}</textarea>
+    <textarea rows="20" cols="100" name="content">{{ post.content }}</textarea>
     <br>
+    {% if post.img %}
+    <p>Image: {{ post.img }}</p>
+    {% endif %}
     <input type="file" name="img" value="{{ post.img }}">
     <br>
     is published

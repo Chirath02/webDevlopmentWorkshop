@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Add a new post</h1>
+    <p>{{ request.user.username }}</p>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Title</p>
+        <textarea rows="3" cols="150" name="title"></textarea>
+        <p>Content</p>
+        <textarea rows="20" cols="150" name="content"></textarea>
+        <p>Img File</p>
+        <input name="img" type="file">
+        <p>is published</p>
+        <input name="is_published" value="True" type="checkbox">
+        <input type="hidden" value="{{ request.user.username }}" name="user">
+        <input type="submit">
+    </form>
+</body>
+</html>
