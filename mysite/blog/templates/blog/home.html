@@ -1,14 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
 
-{%  for post in object_list %}
-    <h1> {{ post.title }}</h1>
-    <p> {{ post.content }}</p>
-{% endfor %}
-</body>
-</html>
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+    {%  include 'blog/nav_bar.html' %}
+
+    <div id="cover">
+        <h1 id="cover-text">Welcome</h1>
+        <h3 id="cover-subtext">Welcome to my Blog</h3>
+    </div>
+
+    <div class="post-div">
+    <div id="posts">
+        <div class="container-fluid">
+            <div class="row">
+                {%  for post in object_list %}
+                    <div class="col-md-4 col-sm-6">
+                        <a href="{% url 'post' post.id %}"><h3>{{ post.title }}</h3></a>
+                        <img src="/media/{{ post.img }}" class="img-responsive img" alt="Responsive image">
+                        <p>{{ post.content }}..<a href="{% url 'post' post.id %}">read more</a></p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="footer-data">
+                <p><a href="">GitHub</a> | <a href="">LinkedIn</a</p>
+                <p> Created by Chirath R, FOSS@Amrita</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

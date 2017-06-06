@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
-from django.shortcuts import render
-
-# Create your views here.
-from django.views import generic
-
+from django.shortcuts import render, redirect
 from blog.models import Post, Comment
 
 
@@ -23,14 +18,19 @@ def post_detail(request, pk):
     post = Post.objects.get(id=int(pk))
     comments = Comment.objects.filter(post=post)
     context = {'post': post, 'comments': comments}
-    print comments
     return render(request, template_name, context)
 
 
-
-
-
-
-
-
-
+def edit_post(request, pk):
+    post = Post.objects.get(id=int(pk))
+    if request.method == "GET":
+        template_name = 'blog/post_edit.html'
+        context = {'post': post}
+        return render(request, template_name, context)
+    else:
+        post.title = request.POST['title']
+        post.content = request.POST['content']
+        post.is_published = request.POST['is_published']
+        post.img = request.FILES['img']
+        post.save()
+        return redirect('post', post.id)

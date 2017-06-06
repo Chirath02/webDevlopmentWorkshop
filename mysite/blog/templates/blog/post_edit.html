@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    Title
+    <br>
+    <textarea cols="100" name="title">{{ post.title }}</textarea>
+    <br>
+    Content
+    <br>
+    <textarea rows="4" cols="100" name="content">{{ post.content }}</textarea>
+    <br>
+    <input type="file" name="img" value="{{ post.img }}">
+    <br>
+    is published
+    <br>
+    <input type="checkbox" name="is_published" value="True">
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>
