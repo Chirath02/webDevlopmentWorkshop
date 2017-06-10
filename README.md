@@ -23,5 +23,9 @@ A blog designed using Bootstrap
 
 Djnago web app containing polls, blog and a music app.
 
+![Alt text](/mysite/blog.png?raw=true "Blog home")
+
 polls and blog used function based views to help students understand the wokring of django.
 music app is implemeted using class based views with emphasis on coding conventions and best practises.
+
+![Alt text](/mysite/detail.png?raw=true "Blog Detail")
