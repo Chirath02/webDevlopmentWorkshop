@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
-from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView
 
+from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView
 from music.forms import SongModelForm
 from music.models import Album, Song
 
@@ -51,6 +51,23 @@ class AlbumUpdateView(UpdateView):
 
 class AlbumDeleteView(DeleteView):
     model = Album
-    success_url = '/music'
+    success_url = reverse_lazy('album_list')
 
 
+class SongDetailView(DetailView):
+    model = Song
+
+
+class SongUpdateView(UpdateView):
+    model = Song
+    fields = ['name', 'artist']
+
+    def get_success_url(self):
+        return reverse('album_detail', kwargs={'pk': self.get_object().album.id})
+
+
+class SongDeleteView(DeleteView):
+    model = Song
+
+    def get_success_url(self):
+        return reverse('album_detail', kwargs={'pk': self.get_object().album.id})
