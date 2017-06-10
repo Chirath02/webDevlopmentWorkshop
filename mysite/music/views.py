@@ -49,6 +49,7 @@ class AlbumUpdateView(UpdateView):
 
 class AlbumDeleteView(DeleteView):
     model = Album
+    # no need of success url, by default calls Album.get_absolute_url() from models.py
 
 
 class SongDetailView(DetailView):
