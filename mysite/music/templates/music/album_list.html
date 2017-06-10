@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Albums</h1>
+
+{%  for album in object_list %}
+    <a href="{% url 'album_detail' album.pk %}"> <h3>{{ album.name }}</h3> </a>
+    <img height="150px" src="/media/{{ album.img }}" />
+{% endfor %}
+
+</body>
+</html>

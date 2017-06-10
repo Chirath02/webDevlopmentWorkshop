@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>{{ object.name }}</h1>
+<img height="150px" src="/media/{{ object.img }}" />
+
+<h2>Songs</h2>
+
+{%  for song in songs %}
+    <h4>{{ song.name }}</h4>
+{% endfor %}
+
+<button onclick="display()">Add song</button>
+
+<div style="display: none;" id="form">
+    <h2>Add song</h2>
+    <form method="POST" action="">
+        {%  csrf_token %}
+        Name:
+        <input type="text" name="name"><br>
+        Artist:
+        <input type="text" name="artist"><br>
+        <input type="submit">
+    </form>
+</div>
+
+<script>
+    function display() {
+        form = document.getElementById('form');
+        form.style.display = 'block';
+    }
+</script>
+</body>
+</html>

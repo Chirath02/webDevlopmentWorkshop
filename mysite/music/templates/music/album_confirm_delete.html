@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <p>Delete confirmation</p>
+
+    <form class="wide" action="" method="post">
+            {% csrf_token %}
+            <p class="submit"><input type="submit" value="Yes, delete the Album."></p>
+    </form>
+
+</body>
+</html>

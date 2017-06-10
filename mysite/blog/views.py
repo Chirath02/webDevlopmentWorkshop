@@ -101,42 +101,6 @@ def signup(request):
     return render(request, template, context)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class AddPost(generic.CreateView):
     model = Post
     template_name = 'blog/add_post.html'
@@ -151,21 +115,6 @@ class EditPost(generic.UpdateView):
     success_url = '/blog'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class PostDetailView(generic.DetailView):
+    model = Post
+    template_name = 'blog/post.html'
