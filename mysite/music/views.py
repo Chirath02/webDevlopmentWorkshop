@@ -20,20 +20,18 @@ class AlbumDetailView(DetailView):  # default template = album_detail.html
 
     def get_context_data(self, **kwargs):
         context = super(AlbumDetailView, self).get_context_data(**kwargs)
-        songs = Song.objects.filter(album=context['object'])
-        form = SongModelForm()
-        context["songs"] = songs
-        context['form'] = form
+        context['songs'] = Song.objects.filter(album=context['object'])
+        context['form'] = SongModelForm()
         return context
 
     def post(self, request, **kwargs):
         form = SongModelForm(request.POST)
-        form.album = Album.objects.get(id=self.kwargs['pk'])
-        print form
         if form.is_valid():
-            form.save()
-            return redirect('album_detail', form.album.id)
+            album = self.get_object()
+            Song(album=album, name=form.cleaned_data.get('name'), artist=form.cleaned_data.get('artist')).save()
+            return redirect('album_detail', album.id)
         else:
+            self.object = self.get_object()
             context = self.get_context_data(**kwargs)
             context['form'] = form
             return render(request, self.get_template_names(), context)

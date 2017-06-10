@@ -19,12 +19,10 @@
 
 <div style="display: none;" id="form">
     <h2>Add song</h2>
+    <p>{{ form.errors }}</p>
     <form method="POST" action="">
         {%  csrf_token %}
-        Name:
-        <input type="text" name="name"><br>
-        Artist:
-        <input type="text" name="artist"><br>
+        {{ form.as_p }}
         <input type="submit">
     </form>
 </div>

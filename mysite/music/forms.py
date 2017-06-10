@@ -5,4 +5,6 @@ from music.models import Song
 class SongModelForm(ModelForm):
     class Meta:
         model = Song
-        fields = ['album', 'name', 'artist']
+        fields = ['name', 'artist']
+
+
