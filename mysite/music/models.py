@@ -10,7 +10,9 @@ class Album(models.Model):
     genre = models.CharField(max_length=250)
 
     def get_absolute_url(self):
-        return reverse('album_detail', kwargs={'pk': self.pk})
+        print 'pk : ' + str(self.pk)
+        print reverse('album_detail', args=(self.pk, ))
+        return reverse('album_detail', args=(self.pk, ))
 
     def __str__(self):
         return self.name

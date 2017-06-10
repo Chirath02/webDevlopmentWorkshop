@@ -40,18 +40,15 @@ class AlbumDetailView(DetailView):  # default template = album_detail.html
 class AlbumCreateView(CreateView):
     model = Album
     fields = ['name', 'img', 'genre']
-    success_url = reverse_lazy('album_detail')
 
 
 class AlbumUpdateView(UpdateView):
     model = Album
     fields = ['name', 'img', 'genre']
-    success_url = reverse_lazy('album_detail')
 
 
 class AlbumDeleteView(DeleteView):
     model = Album
-    success_url = reverse_lazy('album_list')
 
 
 class SongDetailView(DetailView):
