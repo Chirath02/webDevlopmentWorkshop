@@ -21,4 +21,7 @@ A blog designed using Bootstrap
 
 ### mysite
 
-A blog app using Python Django 
+Djnago web app containing polls, blog and a music app.
+
+polls and blog used function based views to help students understand the wokring of django.
+music app is implemeted using class based views with emphasis on coding conventions and best practises.
