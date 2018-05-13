@@ -3,7 +3,7 @@
 This is a part of the 10 day web development training that I took in collaboration with the CIR department of 
 Amrita Vishwa Vidyapeetham.
 
-[Demo](https://chirath02.github.io/web-development-workshop/)
+[Demo](https://chirath02.github.io/road-to-excellence-2017/)
 
 ## Content
 
