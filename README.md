@@ -1,6 +1,8 @@
-# Web development workshop
+# Road to excellence workshop
 
-This is a part of web development training for first years.
+This is a part of the 10 day web development training that I took in collaboration with the CIR department of 
+Amrita Vishwa Vidyapeetham.
+
 [Demo](https://chirath02.github.io/web-development-workshop/)
 
 ## Content
